@@ -1,0 +1,11 @@
+=============================================================
+== PPC-IOP Dev8_Exp2 Quirks                                ==
+== v0.1 2023                                               ==
+== by nox                                                  ==
+=============================================================
+
+Range: 0x1F803800 - 0x1F803850
+
+Writes to 0x1F80380c will also be passed to the PPC UART TX.
+
+Everything else is written and read directly.
