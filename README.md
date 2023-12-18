@@ -8,8 +8,12 @@
 - A complete SDK
 - A PPC module loader
 
-### Demo:
+### Demo
 Reading memory and editing PARAM_CPU_DELAY in realtime with PPC-MON
+
+
+https://github.com/qnox32/PPC-IOP/assets/123997012/29077d0b-a8f0-48fc-ba32-009b3af6459d
+
 
 
 ### Requirements:
