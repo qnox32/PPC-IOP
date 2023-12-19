@@ -1,5 +1,8 @@
 ### PPC-IOP UART
-The PPC-IOP UART RX and TX are accessible through an unpopulated connector footprint located on the underside of the motherboard (together with the EE UART and some other signals). This connector footprint seems to be consistent across all 75K and later models. The PPC-IOP UART signals use 3.5V logic levels and the baud rate is 57600 bps. When powered on or reset the message "D E C K A R D compiled (date)" is sent.
+The PPC-IOP UART RX and TX are accessible through an unpopulated connector footprint located on the B side (underside) of the motherboard (together with the EE UART and some other signals). This connector footprint seems to be consistent across all 75K and later models. The PPC-IOP UART signals use 3.5V logic levels and the baud rate is 57600 bps. When powered on or reset the following message is seen
+```
+D E C K A R D compiled $date
+```
 
 UART location on SCHP-75K (GH-040-??):
 ![nox_75K](https://github.com/qnox32/PPC-IOP/assets/123997012/966b0516-266d-4504-8871-a3fbcb9a1aa4)
