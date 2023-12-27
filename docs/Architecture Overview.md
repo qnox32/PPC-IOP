@@ -77,6 +77,9 @@ process at a time.
 The main emulation loop is essentially:
 Fetch MIPS instruction -> Copy to APU using custom instructions -> Get instruction type (logic, load, store, etc) and operand address (if applicable) from APU -> Perform operations required for instruction type -> Repeat until MIPS cycle count register reaches zero or interrupt occurs.
 
+Diagram:
+![main_emu_diag](https://github.com/qnox32/PPC-IOP/assets/123997012/048f8a4e-58a9-47db-8b91-00208bcf9b32)
+
 When the MIPS cycle count register reaches zero or an interrupt occurs, and the subsequent instruction is not in a delay slot, the APU will set the instruction type flag to zero when the following instruction is passed to it. This causes execution to branch out of the main emulation loop and into the event / interrupt handler. However, if these conditions occur when the subsequent instruction IS in a delay slot, the loop continues until a non-delay slot instruction is encountered. If the branch was triggered by the cycle count reaching zero, the previously scheduled event is called. The event handler then determines the next event to run and sets the MIPS cycle count register accordingly upon re-entering the main emulation. ie: next event -> event trigger time = 2000 MIPS cycles -> emulation_loop_run(2000 cycles). There is always one event scheduled to run which is the timing control event. The timing event is responsible for approximating the speed of the original MIPS-IOP or PS1 depending on the mode. (TODO: more on timing control)
 
 ### Interrupts
