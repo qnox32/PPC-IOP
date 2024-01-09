@@ -1,17 +1,18 @@
-=============================================================
-== PPC-IOP Unknown PPC Device                              ==
-== v0.1 2023                                               ==
-== by nox                                                  ==
-=============================================================
 
-Unknown device found while probing DCRs, it has not been explored.
+# PPC-IOP Unknown PPC Device
+> v0.1 2023  
+> by nox
 
-Indirect DCR access:
-DCR-0x16 = register number
-DCR-0x17 = register value
+
+## Unknown device found while probing DCRs
+it has not been explored.
+
+## Indirect DCR access:
+DCR-0x16 = register number  
+DCR-0x17 = register value  
 
 Registers 0x0 - 0x3F
-
+```
 =============================================================================
 0x0: 
     default: 0x0
@@ -428,4 +429,4 @@ Registers 0x0 - 0x3F
 0x3f:
     r/o
     default: 0x0
-=============================================================================
+```
